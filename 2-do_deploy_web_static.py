@@ -43,5 +43,5 @@ def do_deploy(archive_path):
         run("mv {}/web_static/* {}".format(rmt_path, rmt_path))
         run("rm -d {}/web_static/".format(rmt_path))
         return True
-    except:
+    except Exception:
         return False
