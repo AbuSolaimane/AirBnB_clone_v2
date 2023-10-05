@@ -4,7 +4,7 @@ this is a module
 """
 
 from datetime import datetime
-from fabric.api import run, local, puti, env
+from fabric.api import run, local, put, env
 from os import path
 env.hosts = ['107.23.107.180', '52.3.242.207']
 
