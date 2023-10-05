@@ -6,6 +6,7 @@ this is a module
 from datetime import datetime
 from fabric.api import run, local, put
 from os.path import exists
+env.hosts = ['107.23.107.180', '52.3.242.207']
 
 
 def do_pack():
@@ -21,7 +22,6 @@ def do_pack():
     else:
         return None
 
-env.hosts = ['107.23.107.180', '52.3.242.207']
 
 def do_deploy(archive_path):
     """
