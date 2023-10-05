@@ -4,30 +4,16 @@ this is a module
 """
 
 from datetime import datetime
-from fabric.api import run, local, put
-from os.path import exists
+from fabric.api import run, local, puti, env
+from os import path
 env.hosts = ['107.23.107.180', '52.3.242.207']
-
-
-def do_pack():
-    """
-    this is a class
-    """
-
-    time = datetime.now()
-    archive = 'web_static_' + time.strftime("%Y%m%d%H%M%S") + '.' + 'tgz'
-    local('mkdir -p versions')
-    if local('tar -cvzf versions/{} web_static'.format(archive)) is not None:
-        return archive
-    else:
-        return None
 
 
 def do_deploy(archive_path):
     """
     this is a method
     """
-    if exists(archive_path) is False:
+    if path.exists(archive_path) is False:
         return False
 
     try:
