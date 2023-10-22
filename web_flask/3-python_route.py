@@ -27,7 +27,7 @@ def descripe_c(text):
 
 
 @app.route('/python/<text>', strict_slashes=False)
-def descripe_python(text):
+def descripe_python(text="is cool"):
     """this a function"""
     return ("Python {}".format(text.replace("_", " ")))
 
