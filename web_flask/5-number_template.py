@@ -3,7 +3,7 @@
 this is a module
 """
 
-from flask import Flask, requests, render_template
+from flask import Flask, render_template, request
 
 app = Flask("__name__")
 
